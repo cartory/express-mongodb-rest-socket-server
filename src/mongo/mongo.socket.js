@@ -16,7 +16,7 @@ const addSocket = (socket) => {
 			})
 			.catch((err) => {
 				console.error(err)
-				socket.emit("error", err)
+				socket.broadcast.emit("error", err)
 			})
 	})
 

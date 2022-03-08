@@ -12,4 +12,8 @@ const findOne = (name) => {
 	return collection.toArray()
 }
 
-module.exports = { findAll, findOne }
+const saveOne = (collectionName, data) => {
+	return mongoose.connection.db.collection(collectionName).insertOne(data)
+}
+
+module.exports = { findAll, findOne, saveOne }

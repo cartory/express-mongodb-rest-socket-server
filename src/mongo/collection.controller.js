@@ -26,4 +26,16 @@ const findOne = async ({ params }, res) => {
 	return res.status(500).json([])
 }
 
-module.exports = { findAll, findOne }
+const saveOne = async ({ params, body }, res) => {
+	const { name } = params
+	try {
+		const result = await collectionService.saveOne(name, body)
+
+		return res.status(200).json(result)
+	} catch (err) {
+		console.error(err)
+		return res.status(500).json(err)
+	}
+}
+
+module.exports = { findAll, findOne, saveOne }

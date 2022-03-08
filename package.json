@@ -8,6 +8,10 @@
     "start": "node src/index",
     "start:dev": "nodemon src/index"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cartory/express-mongodb-rest-socket-server.git"
+  },
   "keywords": [
     "mongodb",
     "nodejs",
@@ -15,6 +19,10 @@
   ],
   "author": "cartory",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cartory/express-mongodb-rest-socket-server/issues"
+  },
+  "homepage": "https://github.com/cartory/express-mongodb-rest-socket-server#readme",
   "nodemonConfig": {
     "delay": 1000,
     "verbose": false,

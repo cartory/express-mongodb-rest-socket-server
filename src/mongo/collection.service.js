@@ -1,13 +1,15 @@
 const mongoose = require("mongoose")
 
-const findAll = async () => {
-	const collections = await mongoose.connection.db.listCollections().toArray()
+const findAll = () => {
+	const collections = mongoose.connection.db.listCollections()
 
-	return collections
+	return collections.toArray()
 }
 
-const findOne = async (name) => {
-	return mongoose.connection.db.collection(name).find().toArray()
+const findOne = (name) => {
+	const collection = mongoose.connection.db.collection(name).find()
+
+	return collection.toArray()
 }
 
 module.exports = { findAll, findOne }

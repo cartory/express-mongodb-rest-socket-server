@@ -17,13 +17,13 @@ const findOne = async ({ params }, res) => {
 
 	try {
 		const collection = await collectionService.findOne(name)
-		
+
 		return res.status(200).json(collection)
 	} catch (err) {
 		console.error(err)
 	}
 
-	return res.status(500).json({})
+	return res.status(500).json([])
 }
 
 module.exports = { findAll, findOne }

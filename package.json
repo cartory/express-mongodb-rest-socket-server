@@ -1,0 +1,42 @@
+{
+  "name": "web-socket-mongodb-server",
+  "version": "1.0.0",
+  "description": "web socket server with mongodb connection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index",
+    "start:dev": "nodemon src/index"
+  },
+  "keywords": [
+    "mongodb",
+    "nodejs",
+    "socke.io"
+  ],
+  "author": "cartory",
+  "license": "ISC",
+  "nodemonConfig": {
+    "delay": 1000,
+    "verbose": false,
+    "ignore": [
+      ".git",
+      "dist",
+      "node_modules"
+    ],
+    "watch": [
+      "src",
+      ".env",
+      "jsconfig.json"
+    ]
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.4",
+    "socket.io": "^4.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
